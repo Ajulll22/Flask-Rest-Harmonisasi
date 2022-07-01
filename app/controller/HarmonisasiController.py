@@ -20,9 +20,7 @@ from gensim.similarities import SparseTermSimilarityMatrix
 from gensim.similarities import SoftCosineSimilarity
 from itertools import groupby
 import os
-from gensim.test.utils import get_tmpfile
 from config import basedir
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 
 UU_Title = []
@@ -60,11 +58,6 @@ def preproses_tahap1(text):
     text = re.sub('rtf', '', text)
     text = re.sub('republtk', 'republik', text)
     return text
-
-def stemming_prep(text):
-    factory = StemmerFactory()
-    stemmer = factory.create_stemmer()
-    return stemmer.stem(text)
 
 
 def test(file):
