@@ -1,29 +1,9 @@
-from app import app,api
-from app.controller import UserController
+from app import app, api
 from app.controller import HarmonisasiController
 from app.controller import UndangController
 
 from flask import request
 from flask_restx import Resource
-
-
-
-@app.route('/users', methods=['POST', 'GET'])
-def users():
-    if request.method == 'GET':
-        return UserController.index()
-    else:
-        return UserController.store()
-
-
-@app.route('/users/<id>', methods=['PUT', 'GET', 'DELETE'])
-def usersDetail(id):
-    if request.method == 'GET':
-        return UserController.show(id)
-    elif request.method == 'PUT':
-        return UserController.update(id)
-    elif request.method == 'DELETE':
-        return UserController.delete(id)
 
 
 @app.route('/undang', methods=['POST'])
@@ -120,10 +100,12 @@ def wordvecDetail(id):
     if request.method == 'GET':
         return HarmonisasiController.wordvecDetail(id)
 
+
 @app.route('/v1/harmonisasi/keyword', methods=['GET'])
 def harmonisasiKeyword():
     if request.method == 'GET':
         return HarmonisasiController.harmonisasiKeyword()
+
 
 @app.route('/v1/harmonisasi/show/<id>', methods=['GET'])
 def showDetail(id):

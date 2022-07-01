@@ -15,5 +15,4 @@ migrate = Migrate(app, db)
 seeder = FlaskSeeder()
 seeder.init_app(app, db)
 
-from app.model import todo, user
 from app import routes
