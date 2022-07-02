@@ -1,5 +1,5 @@
 from select import select
-from app import response, app
+from app import response
 from flask import request, abort
 import pickle
 import fitz
@@ -7,7 +7,7 @@ import re
 import string
 import pandas as pd
 from nltk.corpus import stopwords as sw
-from app import db
+from main import db
 from sqlalchemy import func
 from app.model.ruu import ruu, ruu_pasal
 from app.model.uud import preprocessing, preprocessing_pasal, uu, uu_pasal_html

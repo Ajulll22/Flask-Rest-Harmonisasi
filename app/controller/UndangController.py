@@ -1,7 +1,7 @@
 from app import response
 from app.model import uud
 from app.model.uud import preprocessing, preprocessing_pasal, uu, uu_pasal_html
-from app import db
+from main import db
 from flask import request, abort
 import pickle
 import fitz

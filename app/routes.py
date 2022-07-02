@@ -1,4 +1,4 @@
-from app import app, api
+from main import app, api
 from app.controller import HarmonisasiController
 from app.controller import UndangController
 
